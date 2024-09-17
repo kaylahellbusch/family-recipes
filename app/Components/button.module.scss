@@ -1,0 +1,16 @@
+@import '../variables.scss';
+
+.button {
+  padding: 10px 20px;
+  border-radius: 8px;
+  display: block;
+  width: fit-content;
+}
+.primary {
+  background-color: $primaryBase;
+  color: white;
+}
+.secondary {
+  background-color: $greyLighten2;
+  margin-right: 8px;
+}
