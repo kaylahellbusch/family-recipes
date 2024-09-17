@@ -1,6 +1,6 @@
 @import './variables.scss';
 
-.container {
+.firstContainer {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
@@ -8,23 +8,69 @@
 #titleContainer {
   color: black;
   width: 50%;
-  padding-top: 100px;
+  padding-top: 150px;
 }
 .title {
   font-family: var(--font-bold), sans-serif;
-  font-size: 30px;
+  font-size: 40px;
 }
 #emph {
   color: $primaryBase;
 }
-#description {
+.description {
   color: $greyBase;
   padding-top: 20px;
 }
 .account {
   color: $greyBase;
-  font-size: 14px;
+  font-size: 12px;
 }
-.login {
+.accentWord {
   color: $primaryBase;
+}
+
+// SHARE
+.secondContainer {
+  display: flex;
+  flex-direction: row;
+  margin-top: 250px;
+}
+.shareTextContainer {
+  padding-left: 60px;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+  max-width: 65%;
+  margin: 0 auto;
+}
+.shareTitle {
+  font-family: var(--font-bold), sans-serif;
+  font-size: 30px;
+  margin-bottom: 30px;
+}
+
+// TRENDING
+.trendingContainer {
+  margin-top: 200px;
+}
+.trendingText {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 30px;
+  p {
+    font-size: 24px;
+    font-family: var(--font-bold), sans-serif;
+  }
+  a {
+    color: $primaryBase;
+  }
+}
+.recipesContainer {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1rem;
+  // list-style-type: none;
 }
