@@ -1,0 +1,30 @@
+@import './variables.scss';
+
+.container {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+#titleContainer {
+  color: black;
+  width: 50%;
+  padding-top: 100px;
+}
+.title {
+  font-family: var(--font-bold), sans-serif;
+  font-size: 30px;
+}
+#emph {
+  color: $primaryBase;
+}
+#description {
+  color: $greyBase;
+  padding-top: 20px;
+}
+.account {
+  color: $greyBase;
+  font-size: 14px;
+}
+.login {
+  color: $primaryBase;
+}

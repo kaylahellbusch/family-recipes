@@ -1,0 +1,37 @@
+@import '../variables.scss';
+
+#header {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  color: black;
+}
+
+#pageIdentifier {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  .title {
+    font-size: 24px;
+  }
+  #second {
+    color: $primaryBase;
+  }
+}
+
+#menu {
+  display: flex;
+  flex-direction: row;
+  li {
+    list-style-type: none;
+    a {
+      padding: 10px 20px;
+    }
+  }
+}
+
+#buttons {
+  display: flex;
+  flex-direction: row;
+}
