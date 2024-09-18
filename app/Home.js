@@ -13,7 +13,7 @@ import BlogPost from './Components/BlogPost'
 const HomePage = () => {
   const { colors } = useColors()
   return (
-    <div style={{ marginBottom: '600px' }}>
+    <div>
       <div className={styles.firstContainer}>
         <div id={styles.titleContainer}>
           <p className={styles.title}>Your Daily Dish</p>
@@ -128,7 +128,7 @@ const HomePage = () => {
           </div>
         </div>
       </div>
-      <div className={styles.dataContainer}>
+      <div className={styles.dataContainer} style={{ marginBottom: '120px' }}>
         <div className={styles.dataHeader}>
           <p className={styles.subHeading}>Popular Categories</p>
           <a className={styles.viewMore}>View more</a>
