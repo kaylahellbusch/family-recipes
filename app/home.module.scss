@@ -1,6 +1,10 @@
 @import './variables.scss';
 
-.container {
+.subHeading {
+  font-family: var(--font-bold), sans-serif;
+  font-size: 30px;
+}
+.firstContainer {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
@@ -8,23 +12,116 @@
 #titleContainer {
   color: black;
   width: 50%;
-  padding-top: 100px;
+  padding-top: 150px;
 }
 .title {
   font-family: var(--font-bold), sans-serif;
-  font-size: 30px;
+  font-size: 40px;
 }
 #emph {
   color: $primaryBase;
 }
-#description {
+.description {
   color: $greyBase;
   padding-top: 20px;
 }
 .account {
   color: $greyBase;
-  font-size: 14px;
+  font-size: 12px;
 }
-.login {
+.accentWord {
   color: $primaryBase;
+}
+
+// SHARE
+.secondContainer {
+  display: flex;
+  flex-direction: row;
+  margin-top: 250px;
+}
+.shareTextContainer {
+  padding-left: 60px;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+  max-width: 65%;
+  margin: 0 auto;
+}
+.shareTitle {
+  margin-bottom: 30px;
+}
+
+.dataContainer {
+  margin-top: 200px;
+}
+.dataHeader {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 30px;
+}
+.viewMore {
+  color: $primaryBase;
+}
+.recipesContainer {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1rem;
+}
+.blogPostContainer {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1rem;
+}
+
+.inTouchContainer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  margin-top: 100px;
+  background-color: $primaryLighten1;
+  padding: 40px 20px 60px;
+  margin-right: -70px;
+  margin-left: -70px;
+  & > div {
+    max-width: 50%;
+  }
+}
+.inTouchTitle {
+  font-family: var(--font-bold), sans-serif;
+  font-size: 30px;
+  margin-bottom: 20px;
+}
+.inTouchDescription {
+  font-size: 20px;
+  color: $greyBase;
+}
+.subscribeContainer {
+  display: flex;
+  align-items: center;
+  margin-top: 20px;
+}
+.email {
+  flex: 1;
+  padding: 12px 8px;
+  font-size: 14px;
+  border-radius: 8px;
+  border: 1px solid $greyLighten1;
+  margin-right: 16px;
+}
+
+.categoriesContainer {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 3rem;
+  column-gap: 5rem;
+}
+.category {
+  text-align: center;
+  p {
+    margin-top: 8px;
+  }
 }
