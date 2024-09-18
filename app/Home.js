@@ -8,6 +8,7 @@ import StarRating from './Components/StarRating'
 import UserImage from './Components/UserImage'
 import Calories from './Components/Calories'
 import Recipe from './Components/Recipe'
+import BlogPost from './Components/BlogPost'
 
 const HomePage = () => {
   const { colors } = useColors()
@@ -61,7 +62,7 @@ const HomePage = () => {
           height='250'
         />
         <div className={styles.shareTextContainer}>
-          <p className={styles.shareTitle}>
+          <p className={`${styles.shareTitle} ${styles.subHeading}`}>
             Share Your <span className={styles.accentWord}>Recipes</span>
           </p>
           <p className={styles.description}>
@@ -75,14 +76,80 @@ const HomePage = () => {
           />
         </div>
       </div>
-      <div className={styles.trendingContainer}>
-        <div className={styles.trendingText}>
-          <p>Trending Recipes</p>
-          <a>View more</a>
+      <div className={styles.dataContainer}>
+        <div className={styles.dataHeader}>
+          <p className={styles.subHeading}>Trending Recipes</p>
+          <a className={styles.viewMore}>View more</a>
         </div>
         <div className={styles.recipesContainer}>
-          {trending.map(recipe => (
+          {recipes.map(recipe => (
             <Recipe recipe={recipe} />
+          ))}
+        </div>
+      </div>
+      <div className={styles.dataContainer}>
+        <div className={styles.dataHeader}>
+          <p className={styles.subHeading}>Blog</p>
+          <a className={styles.viewMore}>View more</a>
+        </div>
+        <div className={styles.blogPostContainer}>
+          {blogPosts.map(post => (
+            <BlogPost post={post} />
+          ))}
+        </div>
+      </div>
+      <div className={styles.dataContainer}>
+        <div className={styles.dataHeader}>
+          <p className={styles.subHeading}>Explore Recipes</p>
+          <a className={styles.viewMore}>View more</a>
+        </div>
+        <div className={styles.recipesContainer}>
+          {recipes.map(recipe => (
+            <Recipe recipe={recipe} />
+          ))}
+        </div>
+      </div>
+      <div className={styles.inTouchContainer}>
+        <div>
+          <p className={styles.inTouchTitle}>Let's Stay In Touch!</p>
+          <p className={styles.inTouchDescription}>
+            Join our newsletter so we can reach out to you with our news and
+            offers.
+          </p>
+          <div className={styles.subscribeContainer}>
+            <input
+              type='text'
+              id='email'
+              name='email'
+              placeholder='Enter Your Email'
+              className={styles.email}
+            />
+            <Button title='Subscribe' />
+          </div>
+        </div>
+      </div>
+      <div className={styles.dataContainer}>
+        <div className={styles.dataHeader}>
+          <p className={styles.subHeading}>Popular Categories</p>
+          <a className={styles.viewMore}>View more</a>
+        </div>
+        <div className={styles.categoriesContainer}>
+          {categories.map(cat => (
+            <div className={styles.category}>
+              <Image
+                src={cat.image}
+                alt='picture of loaded noodles'
+                width={0}
+                height={0}
+                sizes='100%'
+                style={{
+                  borderRadius: '100px',
+                  width: '70%',
+                  height: 'auto'
+                }}
+              />
+              <p>{cat.title}</p>
+            </div>
           ))}
         </div>
       </div>
@@ -92,7 +159,42 @@ const HomePage = () => {
 
 export default HomePage
 
-const trending = [
+const categories = [
+  {
+    title: 'Breakfast',
+    image: '/breakfast.png'
+  },
+  {
+    title: 'Breakfast',
+    image: '/breakfast.png'
+  },
+  {
+    title: 'Breakfast',
+    image: '/breakfast.png'
+  },
+  {
+    title: 'Breakfast',
+    image: '/breakfast.png'
+  },
+  {
+    title: 'Breakfast',
+    image: '/breakfast.png'
+  },
+  {
+    title: 'Breakfast',
+    image: '/breakfast.png'
+  },
+  {
+    title: 'Breakfast',
+    image: '/breakfast.png'
+  },
+  {
+    title: 'Breakfast',
+    image: '/breakfast.png'
+  }
+]
+
+const recipes = [
   {
     calories: 123,
     image: '/loaded-noodles.png',
@@ -152,5 +254,20 @@ const trending = [
       userName: 'Baby Sister',
       userImage: '/baby-sister.jpg'
     }
+  }
+]
+
+const blogPosts = [
+  {
+    image: '/thanksgiving.jpg',
+    title: 'Thanksgiving Time!',
+    description:
+      'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam'
+  },
+  {
+    image: '/thanksgiving.jpg',
+    title: 'Thanksgiving Time!',
+    description:
+      'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam'
   }
 ]
