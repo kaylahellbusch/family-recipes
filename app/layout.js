@@ -2,6 +2,7 @@ import localFont from 'next/font/local'
 import './globals.scss'
 import Header from './Components/Header'
 import ClientComponent from './Components/ClientComponent'
+import Footer from './Components/Footer'
 
 const poppinsReg = localFont({
   src: './fonts/Poppins-Regular.ttf',
@@ -25,6 +26,7 @@ export default function RootLayout ({ children }) {
       <body className={`${poppinsReg.variable} ${poppinsBold.variable}`}>
         <Header />
         <ClientComponent>{children}</ClientComponent>
+        <Footer />
       </body>
     </html>
   )
