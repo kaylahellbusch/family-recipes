@@ -1,17 +1,28 @@
 'use client'
-import React, { useEffect } from 'react'
+import React, { useEffect, useState } from 'react'
 import styles from './home.module.scss'
-import Button from './Components/Button'
-import useColors from './hooks/useColors'
+import Button from '../Components/Button'
+import useColors from '../hooks/useColors'
 import Image from 'next/image'
-import StarRating from './Components/StarRating'
-import UserImage from './Components/UserImage'
-import Calories from './Components/Calories'
-import Recipe from './Components/Recipe'
-import BlogPost from './Components/BlogPost'
+import StarRating from '../Components/StarRating'
+import UserImage from '../Components/UserImage'
+import Calories from '../Components/Calories'
+import Recipe from '../Components/Recipe'
+import BlogPost from '../Components/BlogPost'
+import { getRecipes } from '@/api'
 
 const HomePage = () => {
   const { colors } = useColors()
+  const [allRecipes, setRecipes] = useState([])
+
+  useEffect(() => {
+    const fetchRecipes = async () => {
+      const data = await getRecipes()
+      setRecipes(data)
+    }
+
+    fetchRecipes()
+  }, [])
   return (
     <div>
       <div className={styles.firstContainer}>

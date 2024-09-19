@@ -1,8 +1,8 @@
 import localFont from 'next/font/local'
 import './globals.scss'
-import Header from './Components/Header'
-import ClientComponent from './Components/ClientComponent'
-import Footer from './Components/Footer'
+import Header from '../Components/Header'
+import ClientComponent from '../Components/ClientComponent'
+import Footer from '../Components/Footer'
 
 const poppinsReg = localFont({
   src: './fonts/Poppins-Regular.ttf',
